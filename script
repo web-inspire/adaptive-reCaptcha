@@ -1,0 +1,11 @@
+$(function() { 
+    var reCaptchaWidth = 302;
+    var containerWidth = $('.container').width(); 
+    if(reCaptchaWidth > containerWidth) {
+        var reCaptchaScale = containerWidth / reCaptchaWidth;
+        $('.g-recaptcha').css({
+            'transform':'scale('+reCaptchaScale+')',
+            'transform-origin':'left top'
+        });
+    }                
+}); 
